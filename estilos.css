@@ -1,0 +1,103 @@
+img{
+    width: 100%;
+}
+
+.padre{
+    
+    display: grid; /* 1 columna*/
+    grid-template-columns: 100%;
+    grid-template-areas: "imagen"
+                            "contenido";
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+    align-items: center; /* ALinear en vertical*/
+    margin-bottom: 20px;
+
+}
+
+.color-section{
+    background-color: rgb(218, 218, 218);
+}
+
+.titulo{
+    font-size: 28px;
+}
+
+.destacado{
+    color: orangered;
+}
+
+.parrafo{
+    line-height: 1.5;
+}
+
+
+.contenedor{
+    /*background-color: greenyellow;*/
+    grid-area: contenido;
+}
+
+.imagen{
+    grid-area: imagen;
+}
+
+
+.padre-invertido{
+    grid-template-areas: "contenido"
+                        "imagen";                 
+}
+
+
+
+/* Va a limitar el ancho de su contendor  */
+.envoltorio{
+    max-width: 800px;
+    margin-left: auto; /* el margin en auto absorbe el espacio que no se usa*/
+    margin-right: auto;
+
+}
+
+
+/* Seccion de Comentarios */
+
+
+.comentario{
+    background-color: greenyellow;
+    text-align: center; /* es heredable */
+}
+
+.comentario_imagen{
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cuando el ancho de la ventana sea mayor a 600px 
+    aplicale estos estilos
+*/
+@media screen and (width > 600px) {
+    .padre{
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "imagen contenido";
+    }
+
+    .padre-invertido{
+        grid-template-areas: "contenido imagen";
+    }
+}
+
+

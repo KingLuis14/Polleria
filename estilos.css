@@ -62,6 +62,13 @@ img{
 /* Seccion de Comentarios */
 
 
+.tablero{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+
 .comentario{
     background-color: greenyellow;
     text-align: center; /* es heredable */
@@ -98,6 +105,13 @@ img{
     .padre-invertido{
         grid-template-areas: "contenido imagen";
     }
+
+    .tablero{
+        grid-template-columns: 1fr 1fr 1fr;
+        
+
+    }
+
 }
 
 

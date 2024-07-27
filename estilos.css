@@ -16,9 +16,21 @@ img{
 
 }
 
-.color-section{
-    background-color: rgb(218, 218, 218);
+/* estilos para la section*/
+
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+.color-section{
+    background-color: #F1F1F1;
+}
+
+.titulo-section{
+    text-align: center;
+}
+
 
 .titulo{
     font-size: 28px;
@@ -70,7 +82,7 @@ img{
 
 
 .comentario{
-    background-color: rgb(221, 221, 221);
+    background-color: white;
     text-align: center; /* es heredable */
 }
 
@@ -101,6 +113,12 @@ img{
     padding-top: 20px;
     padding-bottom: 20px;
     color: white;
+}
+
+.footer_grupo{
+    display: flex;
+    /* Alinear */
+    justify-content: space-between;  /* espacio entre elementos  */
 }
 
 

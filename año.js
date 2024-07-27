@@ -8,4 +8,4 @@ const miSpan = document.getElementById("footer_año")
 esto me devuelve el valor del año actual
 */
 
-miSpan.innerText = new Date().getSeconds()
+miSpan.innerText = new Date().getFullYear();

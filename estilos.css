@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 img{
     width: 100%;
 }
@@ -8,11 +14,9 @@ img{
     grid-template-columns: 100%;
     grid-template-areas: "imagen"
                             "contenido";
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 2px solid black;
     align-items: center; /* ALinear en vertical*/
     margin-bottom: 20px;
+    gap: 20px;
 
 }
 
@@ -30,6 +34,44 @@ section{
 .titulo-section{
     text-align: center;
 }
+
+
+/* Estilos del banner*/
+
+.banner{
+    background-image: url("./img/banner.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    color: white; /* heredable */
+}
+
+.banner-envoltorio{
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /* Alinear en el eje principal */
+    align-items: center; /* Alinea en el eje secundario*/
+    text-align: center;
+    gap: 20px;
+}
+
+.banner-titulo{
+    font-size: 50px;
+}
+
+.banner-titulo > span{
+    color: orangered;
+}
+
+.boton{
+    background-color: orangered;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
 
 
 .titulo{
@@ -56,14 +98,15 @@ section{
 
 
 .padre-invertido{
-    grid-template-areas: "contenido"
-                        "imagen";                 
+    grid-template-areas: "imagen"
+                        "contenido";                 
 }
 
 
 
 /* Va a limitar el ancho de su contendor  */
 .envoltorio{
+    width: 90%;
     max-width: 800px;
     margin-left: auto; /* el margin en auto absorbe el espacio que no se usa*/
     margin-right: auto;
@@ -117,8 +160,10 @@ section{
 
 .footer_grupo{
     display: flex;
+    flex-direction: row;
     /* Alinear */
     justify-content: space-between;  /* espacio entre elementos  */
+    align-items: center;
 }
 
 
@@ -140,7 +185,7 @@ section{
 */
 @media screen and (width > 600px) {
     .padre{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "imagen contenido";
     }
 
@@ -150,8 +195,6 @@ section{
 
     .tablero{
         grid-template-columns: 1fr 1fr 1fr;
-        
-
     }
 
 }

@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: system-ui;
+}
+
+
 img{
     width: 100%;
+    object-fit: cover;
+}
+
+li{
+    list-style-type: none; /* Elimina esos puntos q son por defecto*/
 }
 
 .padre{
@@ -33,13 +43,14 @@ section{
 
 .titulo-section{
     text-align: center;
+    padding-bottom: 20px;
 }
 
 
 /* Estilos del banner*/
 
 .banner{
-    background-image: url("./img/banner.jpg");
+    background-image: url("./img/banner-pollo.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay;
@@ -94,6 +105,7 @@ section{
 
 .imagen{
     grid-area: imagen;
+    aspect-ratio: 1 / 1; /* va a tener el mismo ancho y mismo alto*/
 }
 
 
@@ -168,11 +180,53 @@ section{
 
 
 
+/* estilos de la carta  */
 
+.carta{
+    background-color: white;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
 
+    
+}
 
+.carta-contenido{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.carta-precio{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+}
 
+.carta-titulo{
+    font-weight: 700;
+}
+
+.carta-footer{
+    
+    display: flex;
+    justify-content: space-between; /* alinear en el eje principal*/
+    align-items: center;
+}
+
+.carta-enlace{
+    background-color: yellow;
+    padding: 10px 50px;
+    text-decoration: none;
+    color : black;
+    font-weight: 600;
+
+}
+
+.carta-contenedor{
+    display : grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
 
 
@@ -196,7 +250,15 @@ section{
     .tablero{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .carta-contenedor{
+        grid-template-columns: 1fr 1fr; /* añadismo 1 columna mas*/
+    }
 
 }
 
 
+@media screen and (width > 1024px) {
+    .carta-contenedor{
+        grid-template-columns: 1fr 1fr 1fr; /* añadismo 4 columna mas*/
+    }
+}

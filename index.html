@@ -3,15 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <meta name="description" content="Polleria Pollo feliz visitanos">
-    <meta property="og:description" content="Somos la mejor polleria de lima y del peru">
-    <meta property="og:title" content="Polleria Pollo feliz">
-    <meta property="og:image" content="/img/logo.png">
+    <title>Polleria</title>
+    <meta name="description" content="Polleria Pollo feliz visitanos" />
+    <meta
+      property="og:description"
+      content="Somos la mejor polleria de lima y del peru"
+    />
+    <meta property="og:title" content="Polleria Pollo feliz" />
+    <meta property="og:image" content="https://polleriaproyecto.netlify.app/img/logo.png" />
     <link rel="stylesheet" href="/estilos.css" />
   </head>
   <body>
-    <section class="banner">
+    <header class="header">
+      <nav class="envoltorio menu">
+        <img class="logo" src="/img/logo.png" alt="logo polleria" />
+        <ul class="menu-list">
+          <li>
+            <a href="/" class="menu-enlace">Inicio</a>
+          </li>
+          <li>
+            <a href="#productos" class="menu-enlace">Productos</a>
+          </li>
+          <li>
+            <a href="#comentarios" class="menu-enlace">Comentarios</a>
+          </li>
+        </ul>
+        <button class="boton-hamburguesa" id="btnHamburguesa">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30px"
+          height="30px"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1"
+          ></path>
+        </svg>
+        </button>
+      </nav>
+    </header>
+    <div class="banner">
       <div class="envoltorio banner-envoltorio">
         <h1 class="banner-titulo">
           Bienvenido a
@@ -24,9 +56,9 @@
         </p>
         <a href="" class="boton">Haz tu pedido</a>
       </div>
-    </section>
+    </div>
 
-    <section>
+    <section id="productos">
       <div class="envoltorio">
         <h2 class="titulo-section">Nuestros Productos</h2>
 
@@ -47,13 +79,14 @@
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-2.jpg" alt="" />
             <div class="carta-contenido">
               <h3 class="carta-titulo">Pollo Oferta</h3>
               <ul class="carta-descripcion">
                 <li>• 1/4 pollo</li>
                 <li>• papas fritas</li>
                 <li>• ensalada</li>
+                <li>• gaseosa de 1.5Lt</li>
               </ul>
               <div class="carta-footer">
                 <span class="carta-precio">S/ 12</span>
@@ -62,91 +95,97 @@
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-3.jpg" alt="Combinado familiar" />
             <div class="carta-contenido">
-              <h3 class="carta-titulo">1/4 de Pollo</h3>
+              <h3 class="carta-titulo">Combinado Familiar</h3>
               <ul class="carta-descripcion">
-                <li>• 1/4 pollo</li>
+                <li>• 1 Pollo a la brasa</li>
                 <li>• papas fritas</li>
                 <li>• ensalada</li>
+                <li>• arroz chaufa</li>
+                <li>• gaseosa de 1.5Lt</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 68</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-4.jpg" alt="1/2 pollo" />
             <div class="carta-contenido">
-              <h3 class="carta-titulo">1/4 de Pollo</h3>
+              <h3 class="carta-titulo">1/2 de Pollo</h3>
               <ul class="carta-descripcion">
                 <li>• 1/4 pollo</li>
                 <li>• papas fritas</li>
                 <li>• ensalada</li>
+                <li>• 2 gaseosas de 500ml</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 28</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-5.jpg" alt="churrasco simple" />
             <div class="carta-contenido">
-              <h3 class="carta-titulo">1/4 de Pollo</h3>
+              <h3 class="carta-titulo">Churrazco simple</h3>
               <ul class="carta-descripcion">
-                <li>• 1/4 pollo</li>
+                <li>• Churrazco</li>
+                <li>• Arroz blanco</li>
                 <li>• papas fritas</li>
                 <li>• ensalada</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 54</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-6.jpg" alt="churrasco a lo pobre" />
             <div class="carta-contenido">
-              <h3 class="carta-titulo">1/4 de Pollo</h3>
+              <h3 class="carta-titulo">Churrazco a lo pobre</h3>
               <ul class="carta-descripcion">
-                <li>• 1/4 pollo</li>
-                <li>• papas fritas</li>
-                <li>• ensalada</li>
+                <li>• Churrazco</li>
+                <li>• Plátano</li>
+                <li>• Huevo frito</li>
+                <li>• Arroz blanco</li>
+                <li>• Papas fritas</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 62</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-7.png" alt="brasa extremo" />
             <div class="carta-contenido">
               <h3 class="carta-titulo">1/4 de Pollo</h3>
               <ul class="carta-descripcion">
                 <li>• 1/4 pollo</li>
-                <li>• papas fritas</li>
-                <li>• ensalada</li>
+                <li>• 1 palo de anticucho</li>
+                <li>• 1 chorizo</li>
+                <li>• Papas fritas + ensalada</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 57</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
           </article>
           <article class="carta">
-            <img src="/img/pollo-1.jpg" alt="" />
+            <img src="/img/pollo-8.jpg" alt="pechuga ligth" />
             <div class="carta-contenido">
-              <h3 class="carta-titulo">1/4 de Pollo</h3>
+              <h3 class="carta-titulo">Pechuga Ligth</h3>
               <ul class="carta-descripcion">
-                <li>• 1/4 pollo</li>
-                <li>• papas fritas</li>
-                <li>• ensalada</li>
+                <li>• Filete de pechuga de pollo</li>
+                <li>• Ensalda mixta</li>
               </ul>
               <div class="carta-footer">
-                <span class="carta-precio">S/ 12</span>
+                <span class="carta-precio">S/ 78</span>
                 <a href="/" class="carta-enlace">Ver más</a>
               </div>
             </div>
@@ -187,17 +226,13 @@
             perfección, lleno de sabor y jugosidad.
           </p>
         </div>
-        <img
-          class="imagen"
-          src="/img/horno-pollo.jpg"
-          alt="pollo a la brasa"
-        />
+        <img class="imagen" src="/img/horno-pollo.jpg" alt="pollo a la brasa" />
       </div>
     </section>
 
-    <section class="color-section">
+    <section class="color-section" id="comentarios">
       <div class="envoltorio">
-        <h2 class="titulo-section">Testimonios</h2>
+        <h2 class="titulo-section">Comentarios</h2>
 
         <div class="slider-contenedor">
           <button class="slider-boton-izquierda">
@@ -417,5 +452,6 @@
 
     <script src="/año.js"></script>
     <script src="/Comentarios.js"></script>
+    <script src="/hamburguesa.js"></script>
   </body>
 </html>

@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 45px;
+}
+
 body {
   font-family: system-ui;
+  line-height: 1.6;
 }
 
 button {
@@ -35,11 +41,15 @@ li {
   gap: 20px;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* estilos para la section*/
 
 section {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .color-section {
@@ -48,7 +58,7 @@ section {
 
 .titulo-section {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 /* Estilos del banner*/
@@ -73,6 +83,7 @@ section {
 
 .banner-titulo {
   font-size: 50px;
+  line-height: normal;
 }
 
 .banner-titulo > span {
@@ -83,11 +94,14 @@ section {
   background-color: orangered;
   padding: 10px 20px;
   color: white;
-  text-decoration: none;
+  border-radius: 3px;
+
 }
 
 .titulo {
-  font-size: 28px;
+  font-size: 35px;
+  line-height: normal;
+  margin-bottom: 15px;
 }
 
 .destacado {
@@ -177,6 +191,7 @@ section {
 }
 .slider-contenedor {
   position: relative;
+  
 }
 .slider-boton-izquierda {
   position: absolute;
@@ -229,28 +244,15 @@ section {
   }
 }
 
-/*  Footer  */
-
-.footer_principal {
-  background-color: rgb(27, 27, 27);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
-}
-
-.footer_grupo {
-  display: flex;
-  flex-direction: row;
-  /* Alinear */
-  justify-content: space-between; /* espacio entre elementos  */
-  align-items: center;
-}
 
 /* estilos de la carta  */
 
 .carta {
-  background-color: white;
-  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 15px -3px #0000002b, 0 0px 6px -4px #0000002b;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .carta-contenido {
@@ -271,17 +273,18 @@ section {
 }
 
 .carta-footer {
+  margin-top: auto;
   display: flex;
   justify-content: space-between; /* alinear en el eje principal*/
   align-items: center;
 }
 
 .carta-enlace {
-  background-color: yellow;
-  padding: 10px 50px;
-  text-decoration: none;
+  background-color: #fec600;
+  padding: 6px 40px;
   color: black;
   font-weight: 600;
+  border-radius: 3px;
 }
 
 .carta-contenedor {
@@ -354,6 +357,85 @@ section {
   }
 }
 
+/******* menu **********/
+
+.header{
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 15px 15px -3px #00000016, 0 6px 6px -4px #0000000f;
+  z-index: 100;
+
+}
+
+.menu{
+  /* background-color: crimson; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton-hamburguesa{
+  display: block;
+}
+
+@media screen and (width > 600px) {
+  .boton-hamburguesa{
+    display: none;
+  }
+}
+
+.menu-list{
+  display: flex;
+  align-items: center;
+
+  
+}
+
+@media screen and (width < 600px) {
+  .menu-list{
+    background-color: rgb(235, 235, 235);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    font-size: 17px;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    /* z-index: 1000; */
+    
+  }
+
+  .menu-list.active{
+    transform: translateX(0);
+  }
+}
+
+.menu-enlace{
+  padding: 4px 15px;
+  text-decoration: none;
+  color: black;
+
+}
+
+.logo{
+  width: 50px;
+}
+
+
+
+
 /* Cuando el ancho de la ventana sea mayor a 600px 
     aplicale estos estilos
 */
@@ -378,5 +460,31 @@ section {
 @media screen and (width > 1024px) {
   .carta-contenedor {
     grid-template-columns: 1fr 1fr 1fr; /* añadismo 4 columna mas*/
+  }
+}
+
+
+/*  Footer  */
+
+.footer_principal {
+  background-color: rgb(27, 27, 27);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.footer_grupo {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  /* Alinear */
+  justify-content: space-between; /* espacio entre elementos  */
+  align-items: center;
+}
+
+
+@media screen and (width > 600px) {
+  .footer_grupo {
+    flex-direction: row;
   }
 }
